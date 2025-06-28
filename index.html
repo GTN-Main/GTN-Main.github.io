@@ -1,68 +1,114 @@
 <!DOCTYPE html>
 <html lang="pl">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Technology Network</title>
-    <link rel="stylesheet" href="https://cdn.puffercat.xyz/c/debil-css/pro.css">
-    <script src="https://cdn.puffercat.xyz/c/windows-update/gospodarz.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gayming Technology Network</title>
+    <link rel="stylesheet" href="https://unpkg.com/7.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://raw.githubusercontent.com/GTN-Main/GTN-branding/refs/heads/main/GTN-logo-pride.png"
+    />
+
     <style>
-      * {
-        box-sizing: border-box;
-      }
-
       body {
-        margin: 0;
-        padding: 0;
-        background-color: #121212;
-      }
-
-      main {
-        flex-direction: column;
-        height: 100dvh;
-      }
-
-      .kafel {
-        border: 5px solid #575757;
-        margin: 10px;
-        border-radius: 10px;
-        padding: 5px;
-      }
-
-      iframe {
-        flex: 1;
-      }
-
-      img {
-        flex: 1;
-        width: 50%;
-        max-width: 50dvh;
+        background-image: url("https://raw.githubusercontent.com/GTN-Main/GTN-branding/refs/heads/main/GTN-logo-pride.png");
+        background-repeat: repeat;
+        background-size: 100px auto;
       }
     </style>
   </head>
 
   <body>
-    <main class="wyswietlacz-elastyczny">
-      <div class="wyswietlacz-elastyczny">
-        <div class="czcionka-nie-ma-szeryfa czcionka-niemale kolor-biale kafel" style="min-height: 50dvh; align-items: stretch;">
-          Gaming Technology Network is a new, groundbreaking game development studio that keeps up with trends and gamer
-          needs. The studio's productions will have high standard very good for average gamers. A hunter-type game,
-          after
-          its official release, will rank among the most played games due to its uniqueness and advanced mechanics,
-          which
-          remain a mystery to everyone (even the creator). There is no other project as grand as this one, destined to
-          be
-          loved by millions, or even billions, of people.
+    <div class="window glass active" style="max-width: 800px">
+      <div class="title-bar">
+        <div class="title-bar-text">Gayming Technology Network</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
         </div>
-        <img class="kafel" src="https://raw.githubusercontent.com/GTN-Main/GTN-branding/main/GTN-logo.png"
-          alt="GTN logo">
       </div>
-      <iframe src="https://yewtu.be/embed/UgPdGWyvk1c" title="YouTube video player"
-        frameborder="0" class="kafel"
-        referrerpolicy="no-referrer" allowfullscreen>
-      </iframe>
-    </main>
-  </body>
+      <div class="window-body has-space">
+        <menu role="tablist" aria-label="Window with Tabs">
+          <button role="tab" aria-controls="about" aria-selected="true">
+            About Us
+          </button>
+          <button role="tab" aria-controls="logo">Our Logo</button>
+          <button role="tab" aria-controls="filmik">Filmik popisowy</button>
+        </menu>
+        <article role="tabpanel" id="about">
+          Gayming Technology Network is a new, groundbreaking game development
+          studio that keeps up with trends and gamer needs. The studio's
+          productions will have high standard very good for average gamers. A
+          hunter-type game, after its official release, will rank among the most
+          played games due to its uniqueness and advanced mechanics, which
+          remain a mystery to everyone (even the creator). There is no other
+          project as grand as this one, destined to be loved by millions, or
+          even billions, of people.
 
+          <br />
+          <br />
+          <p>Development progress of Gra Typu Hunter</p>
+          <div role="progressbar" class="error">
+            <div style="width: 20%"></div>
+          </div>
+          <p>Development halted</p>
+          <br />
+          <br />
+          <p>Development progress of Gra Typu PreHunter</p>
+          <div role="progressbar" class="marquee"></div>
+          <p>Development scope not specified</p>
+        </article>
+
+        <article role="tabpanel" hidden id="logo">
+          <img
+            style="width: 100%"
+            src="https://raw.githubusercontent.com/GTN-Main/GTN-branding/refs/heads/main/GTN-logo-pride.png"
+          />
+        </article>
+
+        <article role="tabpanel" hidden id="filmik">
+          <p>
+            You create the content for each tab by using an
+            <code>article</code> tag.
+          </p>
+          <iframe
+            width="100%"
+            height="200"
+            src="https://www.youtube-nocookie.com/embed/UgPdGWyvk1c"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </article>
+        <section class="field-row" style="justify-content: flex-end">
+          <button class="default">OK</button>
+          <button>Cancel</button>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll('[role="tab"]');
+        const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            tabs.forEach((t) => t.setAttribute("aria-selected", "false"));
+            tabPanels.forEach((panel) => (panel.hidden = true));
+
+            tab.setAttribute("aria-selected", "true");
+            const tabId = tab.getAttribute("aria-controls");
+            const targetPanel = document.getElementById(tabId);
+            if (targetPanel) {
+              targetPanel.hidden = false;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
