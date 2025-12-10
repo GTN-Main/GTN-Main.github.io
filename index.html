@@ -55,11 +55,8 @@
 			const response = await fetch("https://cdn.puffercat.xyz/c/debil-css/pro.css", { method: "HEAD" });
 		} catch {
 			const errorMessage = document.createElement("div");
-			errorMessage.innerHTML = `
-				<div class="err">
-					sieć dostarczania treści rozdymkota niestety zawodzi. pewnie znów nie odnowił certyfikatu. zapraszamy ponownie za 6-7 dni roboczych.
-				</div>
-			`;
+			errorMessage.className = "err";
+			errorMessage.textContent = "sieć dostarczania treści rozdymkota niestety zawodzi. pewnie znów nie odnowił certyfikatu. zapraszamy ponownie za 6-7 dni roboczych.";
 
 			document.body.append(errorMessage);
 		}
