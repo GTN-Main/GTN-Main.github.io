@@ -40,7 +40,31 @@
         width: 50%;
         max-width: 50dvh;
       }
+
+      .err {
+		color: red;
+	    font-family: "Comic Sans MS";
+	    position: fixed;
+	    top: 15%;
+	    right: 5%;
+	    box-shadow: 0 0 5px greenyellow;
+      }
     </style>
+	<script defer type="module">
+		try {
+			const response = await fetch("https://cdn.puffercat.xyz/c/debil-css/pro.css", { method: "HEAD" });
+		} catch {
+			const errorMessage = document.createElement("div");
+			errorMessage.innerHTML = `
+				<div class="err">
+					sieć dostarczania treści rozdymkota niestety zawodzi. pewnie znów nie odnowił certyfikatu. zapraszamy ponownie za 6-7 dni roboczych.
+				</div>
+			`;
+
+			document.body.append(errorMessage);
+		}
+
+	</script>
   </head>
 
   <body>
