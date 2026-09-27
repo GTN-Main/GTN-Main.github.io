@@ -1,101 +1,166 @@
 <!DOCTYPE html>
 <html lang="pl">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gayming Technology Network</title>
-    <script>
-        window.addEventListener("error", (event) => {
-            if (event.target.id === "debil-css-link") {
-                const errorMessage = document.createElement("div");
-                errorMessage.className = "err";
-                errorMessage.textContent = "sieć dostarczania treści rozdymkota niestety zawodzi. pewnie znów nie odnowił certyfikatu. jeśli to prawda - proponujemy cofnięcie czasu systemowego o miesiąc.jeśli nie - zapraszamy ponownie za 6 - 7 dni roboczych.";
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gayming Technology Network</title>
+        <script>
+            window.addEventListener("error", (event) => {
+                if (event.target.id === "debil-css-link") {
+                    const errorMessage = document.createElement("div");
+                    errorMessage.className = "err";
+                    errorMessage.textContent = "sieć dostarczania treści rozdymkota niestety zawodzi. pewnie znów nie odnowił certyfikatu. jeśli to prawda - proponujemy cofnięcie czasu systemowego o miesiąc.jeśli nie - zapraszamy ponownie za 6 - 7 dni roboczych.";
 
-                document.body.append(errorMessage);
+                    document.body.append(errorMessage);
+                }
+            }, { capture: true })
+        </script>
+        <link rel="stylesheet" href="https://cdn.puffercat.xyz/c/debil-css/pro.css" id="debil-css-link">
+        <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/188615947">
+        <script src="https://cdn.puffercat.xyz/c/windows-update/gospodarz.js"></script>
+        <style>
+            @font-face {
+                font-display: swap;
+                font-family: 'Bpmf Huninn';
+                font-style: normal;
+                font-weight: 400;
+                src: url('../fonts/bpmf-huninn-v6-latin-regular.woff2') format('woff2');
             }
-        }, { capture: true })
-    </script>
-    <link rel="stylesheet" href="https://cdn.puffercat.xyz/c/debil-css/pro.css" id="debil-css-link">
-    <link rel="icon" type="image/png"
-      href="https://raw.githubusercontent.com/GTN-Main/GTN-branding/refs/heads/main/GTN-logo-pride.png">
-    <script src="https://cdn.puffercat.xyz/c/windows-update/gospodarz.js"></script>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
 
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #121212;
-      }
+            * {
+                box-sizing: border-box;
+            }
 
-      main {
-        flex-direction: column;
-        height: 100dvh;
-      }
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #121212;
+                background-image: url(https://raw.githubusercontent.com/GTN-Main/GTN-branding/refs/heads/main/GTN-logo-pride.png);
+                background-size: 20px 20px;
+                font-family: 'Bpmf Huninn', sans-serif;
+            }
 
-      .kafel {
-        border: 5px solid #575757;
-        margin: 10px;
-        border-radius: 10px;
-        padding: 5px;
-      }
+            main {
+                flex-direction: column;
+                height: 100dvh;
+            }
 
-      #YouTubevideoplayer {
-        flex: 1;
-      }
+            .kafel {
+                margin: 10px;
+                padding: 5px;
+                background: oklch(100% 0 270 / 0.15);
+                backdrop-filter: blur(12px) saturate(150%);
+                border: 1px solid oklch(100% 0 270 / 0.15);
+                border-radius: 16px;
+            }
 
-      img {
-        flex: 1;
-        width: 50%;
-        max-width: 50dvh;
-      }
+            #YouTubevideoplayer {
+                flex: 1;
+            }
 
-      .err {
-		color: red;
-	    font-family: "Comic Sans MS";
-	    position: fixed;
-	    top: 15%;
-	    right: 5%;
-	    box-shadow: 0 0 5px greenyellow;
-      }
-    </style>
-  </head>
+            picture {
+                width: min(50dvh, 50dvw);
+                aspect-ratio: 1/1;
+                min-height: 0;
+            }
 
-  <body>
-    <main class="wyswietlacz-elastyczny">
-      <div class="wyswietlacz-elastyczny">
-        <div class="czcionka-nie-ma-szeryfa czcionka-niemale kolor-biale kafel"
-          style="min-height: 50dvh; align-items: stretch;">
-          Gayming Technology Network is a new, groundbreaking game development studio that keeps up with trends and
-          gamer
-          needs. The studio's productions will have high standard very good for average gamers. A hunter-type game,
-          after
-          its official release, will rank among the most played games due to its uniqueness and advanced mechanics,
-          which
-          remain a mystery to everyone (even the creator). There is no other project as grand as this one, destined to
-          be
-          loved by millions, or even billions, of people.
-        </div>
-        <picture class="kafel">
-            <source src="https://raw.githubusercontent.com/GTN-Main/GTN-branding/bec44f598519b19def53d7cd2f722fb6ea23bf5e/GTN-Logo2.jxl" type="image/jxl">
-            <source src="https://raw.githubusercontent.com/GTN-Main/GTN-branding/bec44f598519b19def53d7cd2f722fb6ea23bf5e/GTN-Logo2.avif" type="image/avif">
-            <source src="https://raw.githubusercontent.com/GTN-Main/GTN-branding/bec44f598519b19def53d7cd2f722fb6ea23bf5e/GTN-Logo2.webp" type="image/webp">
-            <img src="https://raw.githubusercontent.com/GTN-Main/GTN-branding/bec44f598519b19def53d7cd2f722fb6ea23bf5e/GTN-Logo2.jpg" alt="GTN logo">
-        </picture>
-      </div>
-      <div class="wyswietlacz-elastyczny wymiary-wysokosc-za-duza" style="flex-wrap: wrap;">
-        <iframe src="https://www.youtube-nocookie.com/embed/UgPdGWyvk1c" title="YouTube video player"
-          id="YouTubevideoplayer" frameborder="0" class="kafel"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="no-referrer" allowfullscreen>
-        </iframe>
-        <iframe src="https://snowflake.torproject.org/embed.html" width="320" frameborder="0" class="kafel"
-          scrolling="no"></iframe>
-      </div>
-    </main>
-  </body>
+            picture img,
+            picture source {
+                height: 100%;
+                width: 100%;
+                border-radius: 11px;
+            }
+
+            .err {
+                color: red;
+                font-family: "Comic Sans MS";
+                position: fixed;
+                top: 15%;
+                right: 5%;
+                box-shadow: 0 0 5px greenyellow;
+            }
+
+            .ziuuu {
+                width: 200px;
+                height: 200px;
+                position: fixed;
+                transform-origin: 0 0;
+                filter: saturate(0.7);
+                background-image: url(https://avatars.githubusercontent.com/u/188615947);
+                background-size: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="ziuuu"></div>
+        <main class="wyswietlacz-elastyczny">
+            <div class="wyswietlacz-elastyczny" style="align-items: stretch;">
+                <div class="czcionka-niemale kolor-biale kafel" style="flex: 1 1 0%;">
+                    <p style="margin: 10px;">
+                        Gayming Technology Network is a new, groundbreaking game development studio that keeps up with
+                        trends and
+                        gamer
+                        needs. The studio's productions will have high standard very good for average gamers. A
+                        hunter-type game,
+                        after
+                        its official release, will rank among the most played games due to its uniqueness and advanced
+                        mechanics,
+                        which
+                        remain a mystery to everyone (even the creator). There is no other project as grand as this one,
+                        destined to
+                        be
+                        loved by millions, or even billions, of people.
+                    </p>
+                </div>
+                <picture class="kafel">
+                    <source
+                        srcset="https://raw.githubusercontent.com/GTN-Main/GTN-branding/bec44f598519b19def53d7cd2f722fb6ea23bf5e/GTN-Logo2.jxl"
+                        type="image/jxl">
+                    <source
+                        srcset="https://raw.githubusercontent.com/GTN-Main/GTN-branding/bec44f598519b19def53d7cd2f722fb6ea23bf5e/GTN-Logo2.avif"
+                        type="image/avif">
+                    <source
+                        srcset="https://raw.githubusercontent.com/GTN-Main/GTN-branding/bec44f598519b19def53d7cd2f722fb6ea23bf5e/GTN-Logo2.webp"
+                        type="image/webp">
+                    <img src="https://raw.githubusercontent.com/GTN-Main/GTN-branding/bec44f598519b19def53d7cd2f722fb6ea23bf5e/GTN-Logo2.jpg"
+                        alt="GTN logo">
+                </picture>
+            </div>
+            <div class="wyswietlacz-elastyczny wymiary-wysokosc-za-duza" style="flex-wrap: wrap;">
+                <iframe src="https://www.youtube-nocookie.com/embed/UgPdGWyvk1c" title="YouTube video player"
+                    id="YouTubevideoplayer" frameborder="0" class="kafel"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin" allowfullscreen>
+                </iframe>
+                <iframe src="https://snowflake.torproject.org/embed.html" width="320" frameborder="0" class="kafel"
+                    scrolling="no"></iframe>
+            </div>
+        </main>
+        <script>
+            const ziuuu = document.querySelector('.ziuuu');
+            let mouseX = -1000;
+            let mouseY = -1000;
+            let rotation = 0;
+            let speed = 0.1;
+
+            window.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function loop() {
+                rotation += speed;
+                speed += 0.001;
+                if (rotation >= 360) rotation = 0;
+                ziuuu.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) rotate(${rotation}deg)`;
+
+                requestAnimationFrame(loop);
+            }
+
+            requestAnimationFrame(loop);
+        </script>
+    </body>
 
 </html>
